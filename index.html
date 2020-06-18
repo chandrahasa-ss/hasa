@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<style type="text/css">
+	body{
+		background-image: url("https://media1.santabanta.com/full1/Fare/Chocolates/chocolates-11a.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		width:auto;
+		background-attachment: scroll;
+	}
+	.form-box{
+		background-color:#78020C;
+		height: 300px;
+		width:600px;
+		position: relative;
+		top:100px;
+		opacity:0.7;
+		border: 5px solid grey;
+		border-radius: 15px;
+		left:440px;
+	}
+	h1{
+			font-family:sans-serif;
+			text-align: center;
+			position: relative;
+			top:50px;
+			color:#78020C;
+		}
+	h3{
+			font-family:sans-serif;
+			text-align: center;
+			position: relative;
+			top:50px;
+			color:#78020C;
+		}
+	#login{
+		padding-left: 170px;
+		padding-top: 60px;
+	}
+	#ph{
+		padding: 4px;
+		margin-top: 7px;
+		margin-bottom: 10px;
+		width: 47%;
+	}
+	#submit{
+		background-color: #ffd700;
+		width:50%;
+		text-align: center;
+		padding: 5px;
+		margin-top:30px;
+	}
+	#rr{
+		color:#fff;
+		font-weight: bold;
+		font-family: sans-serif;
+	}	
+</style>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">	
+</head>
+<body>
+	<script type="text/javascript">
+		function check_login(x,y) {
+			if(x=='sowmya' && y=='chemya@ch' ){
+
+				if(confirm("LOGIN SUCCESSFUL! WELCOME "+x+" click to continue")){
+
+					 window.open("./welcomepage.html");
+					                                                                                                                              
+				}
+			}
+			else{
+				alert("Try again");
+			}
+			
+			}
+		
+		function player(){
+				var audio = new Audio("./sound.mp3");
+				audio.play();
+			}
+			
+	</script>
+			<button type="player" onclick="player()">Play</button>
+
+	<h1>WELCOME</h1>
+	<h3>Please provide your credentials</h3>
+	<div class="form-box">
+		<form id="login" name="form1">
+			
+			<label for="username"  id="rr">USERNAME:</label><br>
+			<input type="text" name="names" id="ph" required><br>
+			<label for="password"  id="rr">PASSWORD:</label><br>	
+			<input type="password" name="passwords" id="ph" required><br>
+			<button type="submit" value="submit" id="submit" onclick="check_login(document.forms['form1']['names'].value,document.forms['form1']['passwords'].value)"><strong>SUBMIT</strong></button>	
+		</form>
+		
+	</div>	
+</body>
+</html> 
